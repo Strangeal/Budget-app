@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+
+ /* img {
+   width: 10%;
+ }
+
+ .radio__img {
+  position: absolute;
+  left: 50px;
+  top: 163px;
+  z-index: -1;
+ } */
+ 
+ input[type="radio"] {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  background-color: transparent;
+  /* opacity: 0.1; */
+
+ }
+
+ /* CHECKED STYLES */
+/* input [type=radio]:checked {
+  outline: 5px solid #f00;
+} */
