@@ -1,0 +1,23 @@
+<h1>Add New Category</h1>
+
+<%= form_with model: @category, url: categories_path do |f| %>
+  <div class="form__container">
+    <div class="form__control">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="form__control">
+      <%= f.label :icon%><br />
+    <li>
+      <%= f.radio_button :icon, "https://icon-library.com/images/courses-icon/courses-icon-20.jpg"%>
+    </li>
+    <li>
+      <%= f.radio_button :icon, "https://icon-library.com/images/courses-icon/courses-icon-20.jpg"%>
+    </li>
+
+    </div>
+
+    <%= f.submit %>
+  </div>
+<% end %>
