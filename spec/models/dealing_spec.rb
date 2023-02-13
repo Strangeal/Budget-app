@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Dealing, type: :model do
   before :each do
-    @user = User.create(name: "Tom")
-    @first_deal = Dealing.create(name: "Tom", author: @user, amount: 15.99)
+    @user = User.create(name: 'Tom')
+    @first_deal = Dealing.create(name: 'Tom', author: @user, amount: 15.99)
   end
 
   context 'Test validations' do

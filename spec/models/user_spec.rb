@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :each do
-    @user = User.create(name: "Tom")
+    @user = User.create(name: 'Tom')
   end
 
   context 'Test valdation' do
@@ -14,5 +14,5 @@ RSpec.describe User, type: :model do
     it 'Name should return Tom' do
       expect(@user).to be_valid
     end
-  end 
+  end
 end

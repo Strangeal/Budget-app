@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Category, type: :model do
   before :each do
-    @user = User.create(name: "Tom")
+    @user = User.create(name: 'Tom')
     @first_cat = Category.create(author: @user, name: 'Courses', icon: 'https://icon-library.com/images/courses-icon/courses-icon-20.jpg')
   end
 
