@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
-  def index; end
+  def index
+    @categories = Category.includes(:category_dealings)
+  end
 
   def new
     @category = Category.new
@@ -19,6 +21,6 @@ class CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit(:name, :icon)
-  end 
+  end
 
 end

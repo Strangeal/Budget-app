@@ -1,15 +1,7 @@
 <h1>Categories index page</h1>
 
 <ul class="category_container">
-  <% @categories.each do |catlog| %>
-    <li class="catlog">
-      <%= image_tag catlog.icon %>
-      <div class="catlog_info">
-        <h3><%= link_to catlog.name, category_path(catlog.id)%></h3>
-        <%= catlog.created_at %>
-      </div>
-    </li>
-  <%= link_to "Add New Category", new_category_path %>
-  <% end %>
+  <%= render "shared/catlog_card" %>
 
+<%= link_to "Add New Category", new_category_path %>
 </ul>

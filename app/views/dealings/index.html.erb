@@ -1,0 +1,12 @@
+<h1>Show</h1>
+
+<%= @category_dealings.each do |c| %>
+<li>
+  <%= c.dealing.name%>
+  <p>$<%= c.dealing.amount%></p>
+
+</li>
+
+
+<% end %>
+  <%= link_to "Add new" %>
