@@ -7,7 +7,7 @@
       <%= image_tag catlog.icon %>
       <h3><%= link_to catlog.name, category_dealings_path(catlog.id)%></h3>
     </div>
-    <p>Total: $<%= @total %></p>
+    <p>Total: $<%= @total.floor(2) %></p>
   </li>
     
 <% end %>
