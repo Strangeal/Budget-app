@@ -1,0 +1,101 @@
+// Categories
+.category_container {
+  margin: 0 2rem;
+
+  h2 {
+    margin: 1.2rem 0;
+  }
+}
+.catlog {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  margin-bottom: 0.3rem;
+  margin-left: 0.5rem;
+
+  .content {
+    display: flex;
+    align-items: center;
+     
+    a {
+      font-size: 1rem;
+      color: #000;
+      font-weight: 400;
+    }
+  }
+
+  img {
+    border-radius: 8px;
+    padding: 0.5rem 0.5rem;
+    background-color: rgb(146, 134, 134);
+    width: 27%;
+    margin-right: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+// deatils 
+
+.deal_container {
+  // border: 2px solid gray;
+  margin: 1rem;
+}
+
+.created_at {
+  background-color: red;
+    width: fit-content;
+    padding: 0.5rem 1.2rem;
+    text-align: center;
+    margin-right: 1rem;
+    border-radius: 8px;
+
+    .hour {
+      font-size: 12px;
+    }
+
+    .day {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+}
+
+.dealings {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 0.4rem;
+
+  .content {
+    display: flex;
+
+    .data {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0.4rem 0;
+
+      .time {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .amount {
+    display: flex;
+    justify-content: end;
+    font-size: 14px;
+    margin: 0.4rem 0;
+  }
+
+  
+}
+
+.total {
+  text-align: center;
+  border: 1px solid #000;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
