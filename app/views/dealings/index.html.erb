@@ -1,12 +1,24 @@
 <h1>Show</h1>
 
-<%= @category_dealings.each do |c| %>
+<% @category_dealings.each do |c| %>
 <li>
-  <%= c.dealing.name%>
-  <p>$<%= c.dealing.amount%></p>
+  <%= image_tag "#{c.icon}" %>
+  <div class="catlog_info">
+    <%= c.name %>
+  </div>
+  
+  <%c.dealings.each do |z| %>
+  <div>
+  <div><%= z.created_at%></div>
+    <%= z.name%>
+    <%= z.amount %>
+  </div>
 
+  
+  <% end %>
+  <p>Total: $<%= @total %></p>
 </li>
 
 
 <% end %>
-  <%= link_to "Add new" %>
+  <%# <%= link_to "Add new", new_category_dealing_path(@categories)%> %>
