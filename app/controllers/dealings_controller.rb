@@ -1,9 +1,12 @@
 class DealingsController < ApplicationController
 
   def index
-    @categories = Category.find_by(id: params[:id]) # .where(category_id: @categories)
-    @category_dealings = CategoryDealing.includes(:dealing).where(category_id: @categories)
-    # @dealing = Dealing.includes(:category_dealings)
+    @category = CategoryDealing.find_by(id: params[:category_id])
+    @category_dealings = Category.includes(:dealings).where(id: @category)
+    @total = 0
+    @category_dealings.each do |u| 
+      u.dealings.each { |z| @total += z.amount } 
+    end
    end
 
   def new
