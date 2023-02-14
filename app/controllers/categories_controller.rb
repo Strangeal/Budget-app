@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.includes(:category_dealings)
+    @categories = Category.where(author: current_user).includes(:category_dealings).order(created_at: :desc)
   end
 
   def new
