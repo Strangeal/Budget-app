@@ -1,14 +1,12 @@
-<nav class="navbar">
   <ul class="nav__menu">
     <% if user_signed_in? %>
-      
       <li class="nav_item">
         <%= link_to current_user.name %>
-        <i class="fa-solid fa-right-from-bracket"></i>
       </li>
-      <li class="nav_item">
-        <%= button_to "Sign Out", destroy_user_session_path%>
-      </li>
+      
+        <%= button_to destroy_user_session_path, method: :delete do %>
+          <i class="fa-solid fa-right-to-bracket"></i>
+        <% end %>
+      
     <% end %>
   </ul>
-</nav>
