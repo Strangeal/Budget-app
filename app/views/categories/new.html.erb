@@ -1,7 +1,7 @@
-<h1>Add New Category</h1>
+<div class="form__container">
+<h2>Add New Category</h2>
 
 <%= form_with model: @category, url: categories_path do |f| %>
-  <div class="form__container">
     <div class="form__control">
       <%= f.label :name %><br />
       <%= f.text_field :name %>
@@ -12,6 +12,6 @@
       <%= f.text_field :icon %>
     </div>
 
-    <%= f.submit %>
+    <%= f.submit "Save", class: "link_btn"%>
   </div>
 <% end %>

@@ -44,8 +44,8 @@
       <p class="amount">$<%= z.amount %></p>
     </div>
   <% end %>
-  <p class="total">Total Payment: $<%= @total %></p>
+  <p class="total">Total Payment: $<%= @total.floor(2) %></p>
   </li>
+  <%= link_to "New Transaction", new_category_dealing_path(c.id), class: "link_btn"%>
 <% end %>
 </div>
-  <%= link_to "Add new", new_category_dealing_path(@category_dealings), class: "link_btn"%>
