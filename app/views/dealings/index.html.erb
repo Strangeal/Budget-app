@@ -1,32 +1,51 @@
-<li class="nav_head">
-  <i class="fa-sharp fa-solid fa-bars"></i>
-    <h3>Transactions</h3>
-  <i class="fa-solid fa-magnifying-glass"></i><hr>
-</li>
-<%= render "shared/navbar" %>
+<nav class="navbar">
+  <li class="nav_head">
+    <%= link_to categories_path do %>
+      <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+      <h3>Transactions</h3>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </li>
+  <%= render "shared/navbar" %>
+</nav>
 
-
-<h1>Show</h1>
-
+<div class="deal_container">
 <% @category_dealings.each do |c| %>
-<li>
+<li class="catlog">
+  <div class="content">
   <%= image_tag "#{c.icon}" %>
-  <div class="catlog_info">
     <%= c.name %>
   </div>
-  
-  <%c.dealings.each do |z| %>
-  <div>
-  <div><%= z.created_at%></div>
-    <%= z.name%>
-    <%= z.amount %>
-  </div>
-
-  
-  <% end %>
-  <p>Total: $<%= @total %></p>
 </li>
+<hr/>
 
 
+  <li>
+  <% c.dealings.each do |z| %>
+  <div class="dealings">
+    <div class="content">
+      <div class="created_at">
+        <p class="hour"><%= z.created_at.strftime("%h")%></p>
+        <p class="day"><%= z.created_at.strftime("%d")%></p>
+        <p class="year hour"><%= z.created_at.strftime("%Y")%></p>
+      </div>
+
+      <div class="data">
+      <%= z.name%>
+        <p class="time">
+        <span>
+        <i class="fa-solid fa-stopwatch-20"></i>
+        <%= z.created_at.strftime("%T")%>
+        </span>
+        <span><%= z.created_at.strftime("%p")%></span>
+        </p>
+      </div>
+    </div>
+      <p class="amount">$<%= z.amount %></p>
+    </div>
+  <% end %>
+  <p class="total">Total Payment: $<%= @total %></p>
+  </li>
 <% end %>
-  <%# <%= link_to "Add new", new_category_dealing_path(@categories)%> %>
+</div>
+  <%= link_to "Add new", new_category_dealing_path(@category_dealings), class: "link_btn"%>

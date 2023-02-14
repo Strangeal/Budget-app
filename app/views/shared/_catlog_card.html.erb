@@ -1,13 +1,14 @@
-   <% @categories.each do |catlog| %>
-    <li class="catlog">
+<% @categories.each do |catlog| %>
+  <% @total = 0 %>
+  <% catlog.category_dealings.each { |u| @total += u.dealing.amount }%>
+
+  <li class="catlog">
+    <div class="content">
       <%= image_tag catlog.icon %>
-      <div class="catlog_info">
-        <h3><%= link_to catlog.name, category_dealings_path(catlog.id)%></h3>
-        <%= catlog.created_at %>
-      </div>
-    </li>
-    <% @total = 0 %>
-      <% catlog.category_dealings { |u| @total += u.dealing.amount }%>
-      <p>Total: <%= @total %></p>
-        <% end %>
+      <h3><%= link_to catlog.name, category_dealings_path(catlog.id)%></h3>
+    </div>
+    <p>Total: $<%= @total %></p>
+  </li>
+    
+<% end %>
 

@@ -1,12 +1,16 @@
+<nav class="navbar">
 <li class="nav_head">
   <i class="fa-sharp fa-solid fa-bars"></i>
     <h3>Categories</h3>
-  <i class="fa-solid fa-magnifying-glass"></i><hr>
+  <i class="fa-solid fa-magnifying-glass"></i>
 </li>
-<%= render "shared/navbar" %>
-<h1>Categories index page</h1>
-<ul class="category_container">
-  <%= render "shared/catlog_card" %>
 
-<%= link_to "Add New Category", new_category_path %>
+<%= render "shared/navbar" %>
+</nav>
+<ul class="category_container">
+  <h2>Categories</h2>
+  <%= render "shared/catlog_card" %>
+  <div>
+  <%= link_to "Add New Category", new_category_path, class: "link_btn" %>
+  </div>
 </ul>
