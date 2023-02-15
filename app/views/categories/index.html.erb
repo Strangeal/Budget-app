@@ -9,7 +9,9 @@
 </nav>
 <ul class="category_container">
   <h2>Categories</h2>
-  <%= render "shared/catlog_card" %>
+  <%@categories.each do |category| %>
+  <%= render "shared/catlog_card", catlog: category %>
+  <% end %>
   <div>
   <%= link_to "New Category", new_category_path, class: "link_btn" %>
   </div>
