@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_144823) do
   create_table "categories", force: :cascade do |t|
     t.bigint "author_id", null: false
     t.string "name"
-    t.string "icon", default: "https://cdn-icons-png.flaticon.com/512/4491/4491589.png"
+    t.string "icon", default: "https://cdn-icons-png.flaticon.com/512/4835/4835459.png"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_categories_on_author_id"
