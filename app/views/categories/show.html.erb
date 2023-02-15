@@ -1,0 +1,42 @@
+<nav class="navbar">
+  <li class="nav_head">
+    <%= link_to categories_path do %>
+      <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+      <h3>Transactions</h3>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </li>
+  <%= render "shared/navbar" %>
+</nav>
+
+<div class="deal_container">
+  <%= render "shared/catlog_card", catlog: @category %>
+  <hr/>
+
+<% @category_dealings.each do |c| %>
+<li class="catlog">
+  <div class="content">
+  <div class="created_at">
+        <p class="hour"><%= c.created_at.strftime("%h")%></p>
+        <p class="day"><%= c.created_at.strftime("%d")%></p>
+        <p class="year hour"><%= c.created_at.strftime("%Y")%></p>
+      </div>
+      <div class="data">
+        <%= c.dealing.name %>
+        <p class="time">
+          <span>
+            <i class="fa-solid fa-stopwatch-20"></i>
+            <%= c.created_at.strftime("%T")%>
+          </span>
+          <span><%= c.created_at.strftime("%p")%></span>
+        </p>
+        </div>
+  </div>
+        <%= c.dealing.amount %>
+        <%= button_to "Delete", category_dealing_path(@category, c.id), method: :delete%>
+</li>
+
+<% end %>
+  <p class="total">Total Payment: $ <%= @total.floor(2) %></p>
+  <%= link_to "New Transaction", new_category_dealing_path(@category), class: "link_btn"%>
+</div>
