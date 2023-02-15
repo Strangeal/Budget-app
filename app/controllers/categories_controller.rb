@@ -17,6 +17,13 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def show
+    @category = Category.find(params[:id])
+    @category_dealings = CategoryDealing.includes(:dealing).where(category: @category)
+    @total = 0
+    @category_dealings.each { |z| @total += z.dealing.amount}
+   end
+
   private
 
   def category_params
