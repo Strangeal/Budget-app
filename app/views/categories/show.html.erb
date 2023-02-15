@@ -15,28 +15,33 @@
 
 <% @category_dealings.each do |c| %>
 <li class="catlog">
-  <div class="content">
-  <div class="created_at">
-        <p class="hour"><%= c.created_at.strftime("%h")%></p>
-        <p class="day"><%= c.created_at.strftime("%d")%></p>
-        <p class="year hour"><%= c.created_at.strftime("%Y")%></p>
-      </div>
-      <div class="data">
-        <%= c.dealing.name %>
-        <p class="time">
-          <span>
-            <i class="fa-solid fa-stopwatch-20"></i>
-            <%= c.created_at.strftime("%T")%>
-          </span>
-          <span><%= c.created_at.strftime("%p")%></span>
-        </p>
+    <div class="content">
+        <div class="created_at">
+          <p class="hour"><%= c.created_at.strftime("%h")%></p>
+          <p class="day"><%= c.created_at.strftime("%d")%></p>
+          <p class="year hour"><%= c.created_at.strftime("%Y")%></p>
         </div>
-  </div>
-        <%= c.dealing.amount %>
-        <%= button_to "Delete", category_dealing_path(@category, c.id), method: :delete%>
+        <div class="data">
+          <%= c.dealing.name %>
+          <p class="time">
+            <span>
+              <i class="fa-solid fa-stopwatch-20"></i>
+              <%= c.created_at.strftime("%T")%>
+            </span>
+            <span><%= c.created_at.strftime("%p")%></span>
+          </p>
+        </div>
+    </div>
+
+    <div class="content_class">
+      <p>$<%= c.dealing.amount %></p>
+        <%= button_to category_dealing_path(@category, c.id), method: :delete do %>
+          <i class="fa-solid fa-dumpster"></i>
+        <%end%>
+    </div>
 </li>
 
 <% end %>
-  <p class="total">Total Payment: $ <%= @total.floor(2) %></p>
+  <p class="total">Total Payment: $<%= @total.floor(2) %></p>
   <%= link_to "New Transaction", new_category_dealing_path(@category), class: "link_btn"%>
 </div>
