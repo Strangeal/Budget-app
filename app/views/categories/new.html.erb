@@ -1,5 +1,5 @@
 <div class="form__container">
-<h2>Add New Category</h2>
+<h2>New Category</h2>
 
 <%= form_with model: @category, url: categories_path do |f| %>
     <div class="form__control">
@@ -10,6 +10,12 @@
     <div class="form__control">
       <%= f.label :icon%><br />
       <%= f.text_field :icon %>
+    </div>
+    <div class="back">
+    <%=link_to root_path, class: "back_home" do %>
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      <span>Back</span>
+    <% end %>
     </div>
 
     <%= f.submit "Save", class: "link_btn"%>
