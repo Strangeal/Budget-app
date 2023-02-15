@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :each do
-    @user = User.create(name: 'Tom')
+    @user = User.create(name: 'Tom', email: 'tom@apple.com', password: 'hello123')
   end
 
   context 'Test valdation' do
