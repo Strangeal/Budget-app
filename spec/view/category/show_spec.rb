@@ -12,7 +12,7 @@ RSpec.describe 'Category show view', type: :system do
       fill_in 'Email', with: 'tom@apple.com'
       fill_in 'Password', with: 'hello123'
       click_button 'Log in'
-      # save_and_open_page
+      # save_and_open_page # To save sreenshot of test after login
 
       visit category_path(@category.id)
     end
