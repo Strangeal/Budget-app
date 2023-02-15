@@ -12,7 +12,9 @@
 <div class="deal_container">
   <%= render "shared/catlog_card", catlog: @category %>
   <hr/>
-
+<%if @category_dealings.empty?%>
+  <h3 class="empty">No Content Added</h3>
+  <% else %>
 <% @category_dealings.each do |c| %>
 <li class="catlog">
     <div class="content">
@@ -43,5 +45,6 @@
 
 <% end %>
   <p class="total">Total Payment: $<%= @total.floor(2) %></p>
+  <% end%>
   <%= link_to "New Transaction", new_category_dealing_path(@category), class: "link_btn"%>
 </div>

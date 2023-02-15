@@ -9,10 +9,14 @@
 </nav>
 <ul class="category_container">
   <h2>Categories</h2>
+  <%if @categories.empty? %>
+    <h3 class="empty">No Content Added</h3>
+    <% else %>
   <%@categories.each do |category| %>
   <%= render "shared/catlog_card", catlog: category %>
   <% end %>
   <div>
+  <% end %>
   <%= link_to "New Category", new_category_path, class: "link_btn" %>
   </div>
 </ul>
