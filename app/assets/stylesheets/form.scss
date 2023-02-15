@@ -26,6 +26,7 @@
       width: 100%;
     }
   }
+
   .actions {
     margin: 0.5rem;
     color: #000;
@@ -54,16 +55,16 @@
   padding: 1.5rem;
 
   h2 {
-      margin-bottom: 1rem;
-      text-align: center;
-      color: #566861;
-    }
-  
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #566861;
+  }
+
   .form__control {
     padding: 0.5rem 0;
 
     input,
-    select{
+    select {
       width: 100%;
       padding: 0.5rem 1rem;
       margin: 0.3rem 0;
@@ -71,5 +72,4 @@
       outline: none;
     }
   }
-
 }
