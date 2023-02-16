@@ -23,6 +23,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Budget App] <a name="about-project"></a>
+<img src="./app/assets/images/erd_diagram.png" alt="erd_diagram">
 
 > Budget App is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
@@ -33,6 +34,18 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 > Budget App is backend project
+
+<details>
+  <summary>Ruby</summary>
+</details>
+
+<details>
+  <summary>Ruby on Rails</summary>
+</details>
+
+<details>
+  <summary>SCSS</summary>
+</details>
 
 <details>
 <summary>Database</summary>
@@ -60,6 +73,10 @@
 > Add a link to your deployed project.
 
 - [Comming Soon 🎈]()
+
+> Presentation
+
+- [Loom Video](https://www.loom.com/share/bd41c297f60b49cdb555b54166a02d73)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

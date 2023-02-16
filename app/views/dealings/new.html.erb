@@ -1,0 +1,22 @@
+  <div class="form__container">
+  <h2>New Transaction</h2>
+
+<%= form_with model: @dealing, url: category_dealings_path do |f| %>
+    <div class="form__control">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+    </div>
+
+    <div class="form__control">
+    <%= f.label :amount %><br />
+    <%= f.number_field :amount, step: :any %>
+    </div>
+
+    <div class="form__control">
+    <%= f.label :category %>
+    <%= select_tag :category, options_for_select(@categories.map { |category| [category.name, category.id] }), {promt: 'Select Category', required: true} %>
+    </div>
+
+    <%= f.submit "Save", class: "link_btn" %>
+  </div>
+<% end %>
