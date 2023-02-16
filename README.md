@@ -74,6 +74,10 @@
 
 - [Comming Soon 🎈]()
 
+> Presentation
+
+- [Loom Video](https://www.loom.com/share/bd41c297f60b49cdb555b54166a02d73)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
