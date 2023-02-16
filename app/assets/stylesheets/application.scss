@@ -106,3 +106,19 @@ input[type="radio"] {
   font-weight: 300;
   cursor: pointer;
 }
+
+.notice {
+  background-color: #d4edd9;
+  color: #155724;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+}
+
+.alert {
+  background-color: #f8d7d9;
+  color: #721c23;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+}

@@ -9,7 +9,7 @@ class DealingsController < ApplicationController
     @dealing.author = current_user
     if @dealing.save
       CategoryDealing.create(dealing_id: @dealing.id, category_id: params[:category])
-      redirect_to category_path(id: params[:category_id]), notice: 'Expense added successfully'
+      redirect_to category_path(id: params[:category_id]), notice: 'Transaction added successfully'
     else
       render :new
     end
@@ -18,7 +18,7 @@ class DealingsController < ApplicationController
   def destroy
     @dealings = Dealing.find(params[:id])
     @dealings.destroy
-    redirect_to category_path(id: params[:category_id]), notice: 'Transaction successfully deleted'
+    redirect_to category_path(id: params[:category_id]), alert: 'Transaction successfully deleted'
   end
 
   private

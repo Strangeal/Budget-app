@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @category_dealings = CategoryDealing.includes(:dealing).where(category: @category)
+    @category_dealings = CategoryDealing.includes(:dealing).where(category: @category).order(created_at: :desc)
     @total = 0
     @category_dealings.each { |z| @total += z.dealing.amount }
   end
