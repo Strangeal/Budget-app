@@ -1,0 +1,23 @@
+<nav class="navbar">
+<li class="nav_head">
+  <i class="fa-sharp fa-solid fa-bars"></i>
+    <h3>Categories</h3>
+  <i class="fa-solid fa-magnifying-glass"></i>
+</li>
+
+<%= render "shared/navbar" %>
+</nav>
+<%= render "shared/flash"%>
+<ul class="category_container">
+  <h2>Categories</h2>
+  <%if @categories.empty? %>
+    <h3 class="empty">No Content Added</h3>
+    <% else %>
+  <%@categories.each do |category| %>
+  <%= render "shared/catlog_card", catlog: category %>
+  <% end %>
+  <div>
+  <% end %>
+  <%= link_to "New Category", new_category_path, class: "link_btn" %>
+  </div>
+</ul>
