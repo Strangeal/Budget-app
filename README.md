@@ -72,7 +72,7 @@
 
 > Add a link to your deployed project.
 
-- [Comming Soon 🎈]()
+- [Comming Soon 🎈](https://budget-app-pkt7.onrender.com/)
 
 > Presentation
 
@@ -174,7 +174,8 @@ If you like this project then please give a ⭐️ and also share your feedback 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-❤️ [RoR Documentation](https://guides.rubyonrails.org)
+- ❤️ [RoR Documentation](https://guides.rubyonrails.org)
+- ❤️ [Gregoire Vella](https://www.behance.net/gregoirevella)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
